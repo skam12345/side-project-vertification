@@ -1,7 +1,20 @@
-import React from 'react';
-const ModelViewerComponent = () => {
+const ModelViewerComponent = ({src}) => {
+    
+    return (
+      <div style={{width: '100%', height: '600px', display: 'grid', placeItems: 'center'}}>
+        <model-viewer 
+          src={src} 
+          alt="3D Model" 
+          auto-rotate 
+          camera-controls
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-target="auto auto auto"
+          camera-orbit="auto auto auto"
+          style={{marginTop: '-450px', width: "100%", height: "700px", maxWidth: '70%' }}
+        ></model-viewer>
+      </div>
+  );
+}
 
-    return <model-viewer src={'https://test-s3-glb.s3.ap-northeast-2.amazonaws.com/damyo.glb'} auto-rotate camera-controls style={{ width: "400px", height: "400px" }} />;
-};
-
-  export default ModelViewerComponent;
+export default ModelViewerComponent;

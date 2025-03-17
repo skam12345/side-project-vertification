@@ -2,7 +2,14 @@ import { CiImageOn } from "react-icons/ci";
 import { TbHexagon3D } from "react-icons/tb";
 import { FaEyeSlash, FaCaretDown, FaVideo } from "react-icons/fa";
 import { MdAudioFile } from "react-icons/md";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle({
+    'rdw-editor-main .public-DraftStyleDefault-block': {
+        minHeight: 'unset !important',
+        overflow: 'visible !important',
+    }
+});
 
 export const HomeContainer = styled.div`
     width: 100%;
